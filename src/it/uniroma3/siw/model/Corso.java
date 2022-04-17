@@ -31,7 +31,7 @@ public class Corso {
 	private List<Allievo> allievi;
 	
 	@ManyToOne
-	private Corso docente;
+	private Docente docente;
 
 	public long getId() {
 		return id;
@@ -73,11 +73,11 @@ public class Corso {
 		this.allievi = allievi;
 	}
 
-	public Corso getDocente() {
+	public Docente getDocente() {
 		return docente;
 	}
 
-	public void setDocente(Corso docente) {
+	public void setDocente(Docente docente) {
 		this.docente = docente;
 	}
 }

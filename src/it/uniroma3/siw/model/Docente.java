@@ -36,7 +36,7 @@ public class Docente {
 	
 	/*
 	 * Quando carico i dati di un docente, è difficile che non mi interessino anche i dati
-	 * dei corsi ( o corso ), quindi conviene caricare subito cambiando la strategia di fetch di default
+	 * dei corsi ( o del corso ), quindi conviene caricare subito cambiando la strategia di fetch di default
 	 * da LAZY a EAGER
 	 */
 	@OneToMany(fetch = FetchType.EAGER)

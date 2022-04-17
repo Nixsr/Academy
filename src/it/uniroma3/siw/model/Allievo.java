@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -40,7 +41,8 @@ public class Allievo {
 	private List<Corso> corsi;
 	
 	@ManyToOne
-	private Allievo societa;
+	@JoinColumn(name = "societa_id")
+	private Societa societa;
 
 	public Long getId() {
 		return id;
@@ -106,11 +108,11 @@ public class Allievo {
 		this.corsi = corsi;
 	}
 
-	public Allievo getSocieta() {
+	public Societa getSocieta() {
 		return societa;
 	}
 
-	public void setSocieta(Allievo societa) {
+	public void setSocieta(Societa societa) {
 		this.societa = societa;
 	}
 }
