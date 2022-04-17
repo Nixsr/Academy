@@ -32,4 +32,52 @@ public class Corso {
 	
 	@ManyToOne
 	private Corso docente;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public LocalDate getDataDiInizio() {
+		return dataDiInizio;
+	}
+
+	public void setDataDiInizio(LocalDate dataDiInizio) {
+		this.dataDiInizio = dataDiInizio;
+	}
+
+	public int getDurata() {
+		return durata;
+	}
+
+	public void setDurata(int durata) {
+		this.durata = durata;
+	}
+
+	public List<Allievo> getAllievi() {
+		return allievi;
+	}
+
+	public void setAllievi(List<Allievo> allievi) {
+		this.allievi = allievi;
+	}
+
+	public Corso getDocente() {
+		return docente;
+	}
+
+	public void setDocente(Corso docente) {
+		this.docente = docente;
+	}
 }
