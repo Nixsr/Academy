@@ -23,6 +23,7 @@ class CorsoTest {
 
 	Corso corso1 = new Corso();
 	Corso corso2 = new Corso();
+	
 	private static EntityManagerFactory emf;
 	private static EntityManager em;
 	private static EntityTransaction tx;
@@ -51,7 +52,7 @@ class CorsoTest {
 		corso2.setNome("Analisi");
 		corso2.setDataDiInizio(LocalDate.of(2022, 10, 3));
 		corso1.setDurata(4);
-
+		
 		tx.begin();
 		int deletedRows = deleteQuery.executeUpdate();
 		em.persist(corso1);
@@ -71,5 +72,4 @@ class CorsoTest {
 		tx.commit();
 		assertEquals(2, deletedRows);
 	}
-
 }
